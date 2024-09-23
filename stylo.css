@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+nav {
+    position: relative;
+}
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav li {
+        display: inline-block;
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+        nav a:hover {
+            background-color: #CD5328;
+            color: white;
+        }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ecf0f1;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    min-width: 160px;
+}
+
+    .submenu li {
+        display: block;
+        padding: 10px;
+    }
+
+        .submenu li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+            .submenu li a:hover {
+                background-color: #bdc3c7;
+            }
+
+nav li:hover .submenu {
+    display: block;
+}
+
+.assets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+    .assets-table th, .assets-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .assets-table th {
+        background-color: #CD5328;
+        color: white;
+    }
+
+.btn {
+    padding: 6px 12px;
+    margin: 4px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit {
+    background-color: #76c7c0;
+}
+
+    .btn-edit:hover {
+        background-color: #4CAF50;
+    }
+
+.btn-delete {
+    background-color: #ff6b6b;
+}
+
+    .btn-delete:hover {
+        background-color: #f44336;
+    }
+
+.btn-view {
+    background-color: #2196F3;
+}
+
+.pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+    .pagination a {
+        margin: 0 8px;
+        padding: 8px 12px;
+        background-color: #2196F3;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .pagination a:hover {
+            background-color: #1976D2;
+        }
+
+    .pagination .active {
+        background-color: #CD5328;
+    }
+
+.records-per-page {
+    margin: 20px 0;
+    text-align: center;
+}
+
+    .records-per-page select {
+        margin-left: 10px;
+    }
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    .assets-table th, .assets-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .pagination a {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
